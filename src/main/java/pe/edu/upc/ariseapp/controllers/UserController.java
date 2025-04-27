@@ -13,34 +13,6 @@ import java.util.stream.Collectors;
 @RequestMapping("/users")
 public class UserController {
 
-    @Autowired
-    private IUserService aS;
 
-    @GetMapping
-    public List<UserDTO> list() {
-        return aS.list().stream().map(x -> {
-            ModelMapper m = new ModelMapper();
-            return m.map(x, UserDTO.class);
-        }).collect(Collectors.toList());
-    }
-
-    @PostMapping
-    public void insert(@RequestBody UserDTO aDTO) {
-        ModelMapper m = new ModelMapper();
-        User a = m.map(aDTO, User.class);
-        aS.insert(a);
-    }
-
-    @PutMapping
-    public void update(@RequestBody UserDTO aDTO) {
-        ModelMapper m = new ModelMapper();
-        User a = m.map(aDTO, User.class);
-        aS.update(a);
-    }
-
-    @DeleteMapping("/{idApp}")
-    public void delete(@PathVariable("idApp") int idUser) {
-        aS.delete(idUser);
-    }
 
 }
