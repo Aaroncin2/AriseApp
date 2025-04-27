@@ -50,7 +50,6 @@ public class Donation {
     public Donation() {
 
 
-
     }
 
 }
