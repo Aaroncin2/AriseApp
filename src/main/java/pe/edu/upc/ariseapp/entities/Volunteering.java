@@ -73,4 +73,5 @@ public class Volunteering {
         this.attendanceVolunteering = attendanceVolunteering;
         this.areaVolunteering = areaVolunteering;
     }
+    
 }
