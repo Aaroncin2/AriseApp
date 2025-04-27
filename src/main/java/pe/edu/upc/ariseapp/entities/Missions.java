@@ -1,13 +1,12 @@
 package pe.edu.upc.ariseapp.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-
+import jakarta.persistence.*;
+@Entity
+@Table(name= "Missions")
 public class Missions {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idMissions;
 
     @Column(name ="name",nullable = false,length=50)
     private String name;
@@ -23,18 +22,18 @@ public class Missions {
     }
 
     public Missions(int id, String name, String description, User user) {
-        this.id = id;
+        this.idMissions = idMissions;
         this.name = name;
         this.description = description;
         this.user = user;
     }
 
     public int getId() {
-        return id;
+        return idMissions;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int idMissions) {
+        this.idMissions = idMissions;
     }
 
     public String getName() {
