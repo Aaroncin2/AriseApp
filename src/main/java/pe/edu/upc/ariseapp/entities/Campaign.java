@@ -76,3 +76,5 @@ public class Campaign {
         this.rol = rol;
     }
 }
+
+
