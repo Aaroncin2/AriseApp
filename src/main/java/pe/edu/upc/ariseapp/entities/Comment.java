@@ -12,33 +12,25 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idComment;
 
+    @Column(name = "categoryComment",nullable = false,length = 20)
+    private String categoryComment;
 
+    @Column(name = "descriptionComment",nullable = false, length = 100)
+    private String descriptionComment;
 
+    @Column(name = "dateComment",nullable = false)
+    private LocalDate dateComment;
 
 
     public Comment() {
     }
 
-    public int getIdComment() {
-        return idComment;
-    }
 
-    public void setIdComment(int idComment) {
+
+    public Comment(int idComment, String categoryComment, String descriptionComment, LocalDate dateComment) {
         this.idComment = idComment;
-    }
-
-    }
-
-    }
-
-    }
-
-    }
-
-    }
-
-    }
-
-        this.idComment = idComment;
+        this.categoryComment = categoryComment;
+        this.descriptionComment = descriptionComment;
+        this.dateComment = dateComment;
     }
 }
