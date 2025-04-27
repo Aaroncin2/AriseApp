@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>pe.edu.upc</groupId>
-    <artifactId>demo3159API</artifactId>
+    <artifactId>AriseApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo3159API</name>
     <description>demo3159API</description>
