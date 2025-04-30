@@ -20,36 +20,36 @@ public class Review {
     private String textReview;
 
     @ManyToOne
-    @JoinColumn(name = "idUser", nullable = false)
+    @JoinColumn(name = "user", nullable = false)
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "idMissions", nullable = false)
+    @JoinColumn(name = "missions", nullable = false)
     private Missions missions;
 
     @ManyToOne
-    @JoinColumn(name = "idRecompensa", nullable = false)
-    private Recompensas recompensas;
+    @JoinColumn(name = "reward", nullable = false)
+    private Reward reward;
 
     @ManyToOne
-    @JoinColumn(name = "idVolunteering", nullable = false)
+    @JoinColumn(name = "volunteering", nullable = false)
     private Volunteering volunteering;
 
     @ManyToOne
-    @JoinColumn(name = "idCampaign", nullable = false)
+    @JoinColumn(name = "campaign", nullable = false)
     private Campaign campaign;
 
     public Review() {
     }
 
-    public Review(int idReview, String categoryReview, int calificacionReview, String textReview, User user, Missions missions, Recompensas recompensas, Volunteering volunteering, Campaign campaign) {
+    public Review(int idReview, String categoryReview, int calificacionReview, String textReview, User user, Missions missions, Reward reward, Volunteering volunteering, Campaign campaign) {
         this.idReview = idReview;
         this.categoryReview = categoryReview;
         this.calificacionReview = calificacionReview;
         this.textReview = textReview;
         this.user = user;
         this.missions = missions;
-        this.recompensas = recompensas;
+        this.reward = reward;
         this.volunteering = volunteering;
         this.campaign = campaign;
     }
@@ -102,12 +102,12 @@ public class Review {
         this.missions = missions;
     }
 
-    public Recompensas getRecompensas() {
-        return recompensas;
+    public Reward getreward() {
+        return reward;
     }
 
-    public void setRecompensas(Recompensas recompensas) {
-        this.recompensas = recompensas;
+    public void setreward(Reward reward) {
+        this.reward = reward;
     }
 
     public Volunteering getVolunteering() {

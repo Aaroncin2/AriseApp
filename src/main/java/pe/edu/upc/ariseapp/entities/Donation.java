@@ -10,17 +10,19 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDonation;
 
-    @Column(name=" NameDonation" , nullable = false)
-    private int idNameDonation;
+    @Column(name="NameDonation" , nullable = false)
+    private String NameDonation;
 
     @Column(name = "Donation" , nullable = false)
-    private String donation;
+    private String Donation;
 
+    public Donation() {
 
-    public Donation(int idDonation, int idNameDonation, String donation) {
+    }
+    public Donation(int idDonation, String NameDonation, String Donation) {
         this.idDonation = idDonation;
-        this.idNameDonation = idNameDonation;
-        this.donation = donation;
+        this.NameDonation = NameDonation;
+        this.Donation = Donation;
     }
 
     public int getIdDonation() {
@@ -31,25 +33,20 @@ public class Donation {
         this.idDonation = idDonation;
     }
 
-    public int getIdNameDonation() {
-        return idNameDonation;
+    public String getNameDonation() {
+        return NameDonation;
     }
 
-    public void setIdNameDonation(int idNameDonation) {
-        this.idNameDonation = idNameDonation;
+    public void setNameDonation(int idNameDonation) {
+        this.NameDonation = NameDonation;
     }
 
     public String getDonation() {
-        return donation;
+        return Donation;
     }
 
     public void setDonation(String donation) {
-        this.donation = donation;
-    }
-
-    public Donation() {
-
-
+        this.Donation = Donation;
     }
 
 }

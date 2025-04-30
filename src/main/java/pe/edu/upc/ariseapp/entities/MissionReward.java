@@ -11,12 +11,12 @@ public class MissionReward {
     private int idMissionReward;
 
     @ManyToOne
-    @JoinColumn(name="idMissions", nullable=false)
+    @JoinColumn(name="idmissions", nullable=false)
     private Missions missions;
 
     @ManyToOne
-    @JoinColumn(name="idRecompensas", nullable=false)
-    private Recompensas recompensas;
+    @JoinColumn(name="idreward", nullable=false)
+    private Reward reward;
 
     public MissionReward() {
     }
@@ -37,11 +37,11 @@ public class MissionReward {
         this.missions = missions;
     }
 
-    public Recompensas getRecompensas() {
-        return recompensas;
+    public Reward getReward() {
+        return reward;
     }
 
-    public void setRecompensas(Recompensas recompensas) {
-        this.recompensas = recompensas;
+    public void setReward(Reward reward) {
+        this.reward = reward;
     }
 }

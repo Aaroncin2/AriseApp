@@ -6,15 +6,14 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-
 @Table(name = "rols", uniqueConstraints = {@UniqueConstraint(columnNames = {"idUser","rol"})})
-
 public class Rol implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idRol;
 
+    @Column(name="rol", nullable = false,length = 200)
     private String rol;
 
     @ManyToOne
