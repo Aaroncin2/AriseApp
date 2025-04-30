@@ -1,7 +1,5 @@
 package pe.edu.upc.ariseapp.entities;
-
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
 @Entity
@@ -20,6 +18,14 @@ public class Comment {
 
     @Column(name = "dateComment",nullable = false)
     private LocalDate dateComment;
+
+    @ManyToOne
+    @JoinColumn(name="nameUser", nullable=false)
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name="nameForum", nullable=false)
+    private Forum forum;
 
 
     public Comment() {

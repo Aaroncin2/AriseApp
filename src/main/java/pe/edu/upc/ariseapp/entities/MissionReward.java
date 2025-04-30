@@ -10,15 +10,15 @@ public class MissionReward {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idMissionReward;
 
-    @ManyToOne
-    @JoinColumn(name="idmissions", nullable=false)
-    private Missions missions;
-
     @Column(name = "description" , nullable = false , length = 200)
     private String description;
 
     @ManyToOne
-    @JoinColumn(name="idreward", nullable=false)
+    @JoinColumn(name="idMissions", nullable=false)
+    private Missions missions;
+
+    @ManyToOne
+    @JoinColumn(name="reward", nullable=false)
     private Reward reward;
 
     public MissionReward(){

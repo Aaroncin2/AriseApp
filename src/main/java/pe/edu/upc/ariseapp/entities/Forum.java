@@ -1,9 +1,8 @@
 package pe.edu.upc.ariseapp.entities;
-
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
+@Entity
 @Table(name = "forum")
 public class Forum {
     @Id

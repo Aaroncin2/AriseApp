@@ -1,11 +1,10 @@
 package pe.edu.upc.ariseapp.dtos;
-
 import pe.edu.upc.ariseapp.entities.*;
 
 public class ReviewDTO {
     private int idReview;
     private String categoryReview;
-    private int calificationReview;
+    private int qualificationReview;
     private String textReview;
     private User user;
     private Missions missions;
@@ -29,12 +28,12 @@ public class ReviewDTO {
         this.categoryReview = categoryReview;
     }
 
-    public int getCalificationReview() {
-        return calificationReview;
+    public int getQualificationReview() {
+        return qualificationReview;
     }
 
-    public void setCalificationReview(int calificationReview) {
-        this.calificationReview = calificationReview;
+    public void setQualificationReview(int qualificationReview) {
+        this.qualificationReview = qualificationReview;
     }
 
     public String getTextReview() {
