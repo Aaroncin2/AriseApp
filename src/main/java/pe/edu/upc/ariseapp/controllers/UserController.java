@@ -46,6 +46,5 @@ public class UserController {
     public void eliminar(@PathVariable("idUser") int idUser) {
         uS.delete(idUser);
     }
-
 }
 
