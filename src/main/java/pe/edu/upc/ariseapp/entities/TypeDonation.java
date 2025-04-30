@@ -1,6 +1,4 @@
 package pe.edu.upc.ariseapp.entities;
-
-
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +11,10 @@ public class TypeDonation {
 
     @Column(name = "typeDonation" , nullable = false)
     private String typeDonation;
+
+    @ManyToOne
+    @JoinColumn(name="idDonation", nullable=false)
+    private Donation donation;
 
     public TypeDonation() {
 

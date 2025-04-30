@@ -13,14 +13,14 @@ public class Review {
     @Column(name = "categoryReview", nullable = false)
     private String categoryReview;
 
-    @Column(name = "calificationReview", nullable = false)
-    private int calificationReview;
+    @Column(name = "qualificationReview", nullable = false)
+    private int qualificationReview;
 
     @Column(name = "textReview", nullable = false)
     private String textReview;
 
     @ManyToOne
-    @JoinColumn(name = "user", nullable = false)
+    @JoinColumn(name = "nameUser", nullable = false)
     private User user;
 
     @ManyToOne
@@ -42,10 +42,10 @@ public class Review {
     public Review() {
     }
 
-    public Review(int idReview, String categoryReview, int calificationReview, String textReview, User user, Missions missions, Reward reward, Volunteering volunteering, Campaign campaign) {
+    public Review(int idReview, String categoryReview, int qualificationReview, String textReview, User user, Missions missions, Reward reward, Volunteering volunteering, Campaign campaign) {
         this.idReview = idReview;
         this.categoryReview = categoryReview;
-        this.calificationReview = calificationReview;
+        this.qualificationReview = qualificationReview;
         this.textReview = textReview;
         this.user = user;
         this.missions = missions;
@@ -70,12 +70,12 @@ public class Review {
         this.categoryReview = categoryReview;
     }
 
-    public int getCalificationReview() {
-        return calificationReview;
+    public int getQualificationReview() {
+        return qualificationReview;
     }
 
-    public void setCalificationReview(int calificationReview) {
-        this.calificationReview = calificationReview;
+    public void setQualificationReview(int qualificationReview) {
+        this.qualificationReview = qualificationReview;
     }
 
     public String getTextReview() {

@@ -1,5 +1,4 @@
 package pe.edu.upc.ariseapp.dtos;
-
 import java.time.LocalDate;
 
 public class ForumDTO {

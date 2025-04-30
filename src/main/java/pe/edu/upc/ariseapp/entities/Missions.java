@@ -8,8 +8,8 @@ public class Missions {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idMissions;
 
-    @Column(name ="name",nullable = false,length=50)
-    private String name;
+    @Column(name ="nameMissions",nullable = false,length=50)
+    private String nameMissions;
 
     @Column(name ="description", nullable = false,length=50)
     private String description;
@@ -21,27 +21,27 @@ public class Missions {
     public Missions() {
     }
 
-    public Missions(int id, String name, String description, User user) {
+    public Missions(int idMissions, String nameMissions, String description, User user) {
         this.idMissions = idMissions;
-        this.name = name;
+        this.nameMissions = nameMissions;
         this.description = description;
         this.user = user;
     }
 
-    public int getId() {
+    public int getIdMissions() {
         return idMissions;
     }
 
-    public void setId(int idMissions) {
+    public void setIdMissions(int idMissions) {
         this.idMissions = idMissions;
     }
 
-    public String getName() {
-        return name;
+    public String getNameMissions() {
+        return nameMissions;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameMissions(String nameMissions) {
+        this.nameMissions = nameMissions;
     }
 
     public String getDescription() {
@@ -59,4 +59,5 @@ public class Missions {
     public void setUser(User user) {
         this.user = user;
     }
+
 }
