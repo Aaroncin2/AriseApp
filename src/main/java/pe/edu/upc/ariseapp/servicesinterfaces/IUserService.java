@@ -10,5 +10,4 @@ public interface IUserService {
     public User listId(int idUser);
     public void update(User a);
     public void delete(int idUser);
-
 }

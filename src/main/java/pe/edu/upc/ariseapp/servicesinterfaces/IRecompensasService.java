@@ -10,4 +10,5 @@ public interface IRecompensasService {
     public Recompensas listId(int idRecompensa);
     public void update(Recompensas re);
     public void delete(int idRecompensa);
+
 }
