@@ -1,6 +1,5 @@
 package pe.edu.upc.ariseapp.dtos;
 
-import jakarta.persistence.*;
 import pe.edu.upc.ariseapp.entities.Rol;
 
 import java.util.List;

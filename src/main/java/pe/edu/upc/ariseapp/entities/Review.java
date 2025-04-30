@@ -29,7 +29,7 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "idRecompensa", nullable = false)
-    private Recompensas recompensas;
+    private Rewards rewards;
 
     @ManyToOne
     @JoinColumn(name = "idVolunteering", nullable = false)
@@ -42,14 +42,14 @@ public class Review {
     public Review() {
     }
 
-    public Review(int idReview, String categoryReview, int calificacionReview, String textReview, User user, Missions missions, Recompensas recompensas, Volunteering volunteering, Campaign campaign) {
+    public Review(int idReview, String categoryReview, int calificacionReview, String textReview, User user, Missions missions, Rewards rewards, Volunteering volunteering, Campaign campaign) {
         this.idReview = idReview;
         this.categoryReview = categoryReview;
         this.calificacionReview = calificacionReview;
         this.textReview = textReview;
         this.user = user;
         this.missions = missions;
-        this.recompensas = recompensas;
+        this.rewards = rewards;
         this.volunteering = volunteering;
         this.campaign = campaign;
     }
@@ -102,12 +102,12 @@ public class Review {
         this.missions = missions;
     }
 
-    public Recompensas getRecompensas() {
-        return recompensas;
+    public Rewards getRecompensas() {
+        return rewards;
     }
 
-    public void setRecompensas(Recompensas recompensas) {
-        this.recompensas = recompensas;
+    public void setRecompensas(Rewards rewards) {
+        this.rewards = rewards;
     }
 
     public Volunteering getVolunteering() {
