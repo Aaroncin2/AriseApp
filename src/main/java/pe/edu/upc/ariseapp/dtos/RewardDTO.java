@@ -1,6 +1,6 @@
 package pe.edu.upc.ariseapp.dtos;
 
-public class RewardsDTO {
+public class RewardDTO {
     private int idReward;
     private String rewards;
 

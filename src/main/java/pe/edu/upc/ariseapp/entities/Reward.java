@@ -4,21 +4,21 @@ package pe.edu.upc.ariseapp.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name ="Rewards")
-public class Rewards {
+@Table(name ="reward")
+public class Reward {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idReward;
 
-    @Column(name = "rewards", nullable = false, length = 50)
-    private String rewards;
+    @Column(name = "reward", nullable = false, length = 50)
+    private String reward;
 
-    public Rewards() {
+    public Reward() {
     }
 
-    public Rewards(int idReward, String rewards) {
+    public Reward(int idReward, String reward) {
         this.idReward = idReward;
-        this.rewards = rewards;
+        this.reward = reward;
     }
 
     public int getIdReward() {
@@ -29,13 +29,12 @@ public class Rewards {
         this.idReward = idReward;
     }
 
-    public String getRewards() {
-        return rewards;
+    public String getReward() {
+        return reward;
     }
 
-    public void setRewards(String rewards) {
-        this.rewards = rewards;
+    public void setReward(String reward) {
+        this.reward = reward;
     }
-
 }
 

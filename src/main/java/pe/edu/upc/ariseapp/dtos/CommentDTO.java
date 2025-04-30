@@ -39,5 +39,4 @@ public class CommentDTO {
     public void setDateComment(LocalDate dateComment) {
         this.dateComment = dateComment;
     }
-
 }

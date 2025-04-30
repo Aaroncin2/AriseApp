@@ -12,7 +12,7 @@ public class Campaign {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCampaign;
 
-    @Column(name="nameCampaign", nullable = false)
+    @Column(name="nameCampaign", nullable = false,length = 200)
     private String nameCampaign;
 
     @Column(name="descriptionCampaign", nullable = false, length = 200)

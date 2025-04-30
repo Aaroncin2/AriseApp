@@ -10,7 +10,6 @@ import pe.edu.upc.ariseapp.servicesinterfaces.IUserService;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 @RestController
 @RequestMapping("/users")
 public class UserController {

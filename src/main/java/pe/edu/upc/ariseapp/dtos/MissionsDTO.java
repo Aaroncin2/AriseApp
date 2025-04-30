@@ -40,5 +40,4 @@ public class MissionsDTO {
         this.user = user;
     }
 
-
 }

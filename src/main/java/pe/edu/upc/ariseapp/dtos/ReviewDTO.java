@@ -9,7 +9,7 @@ public class ReviewDTO {
     private String textReview;
     private User user;
     private Missions missions;
-    private Rewards rewards;
+    private Reward reward;
     private Volunteering volunteering;
     private Campaign campaign;
 
@@ -61,12 +61,12 @@ public class ReviewDTO {
         this.missions = missions;
     }
 
-    public Rewards getRecompensas() {
-        return rewards;
+    public Reward getReward() {
+        return reward;
     }
 
-    public void setRecompensas(Rewards rewards) {
-        this.rewards = rewards;
+    public void setReward(Reward reward) {
+        this.reward = reward;
     }
 
     public Volunteering getVolunteering() {

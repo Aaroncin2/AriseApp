@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface IReviewService {
     public List<Review> list();
-    public void insert(Review rev);
+    public void insert(Review r);
     public Review listId(int idReview);
-    public void update(Review rev);
+    public void update(Review r);
     public void delete(int idReview);
 }

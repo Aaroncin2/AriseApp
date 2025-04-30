@@ -1,14 +1,12 @@
 package pe.edu.upc.ariseapp.dtos;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import pe.edu.upc.ariseapp.entities.Missions;
-import pe.edu.upc.ariseapp.entities.Recompensas;
+import pe.edu.upc.ariseapp.entities.Reward;
 
 public class MissionRewardDTO {
     private int idMissionReward;
     private Missions missions;
-    private Recompensas recompensas;
+    private Reward reward;
 
     public int getIdMissionReward() {
         return idMissionReward;
@@ -26,12 +24,12 @@ public class MissionRewardDTO {
         this.missions = missions;
     }
 
-    public Recompensas getRecompensas() {
-        return recompensas;
+    public Reward getRewards() {
+        return reward;
     }
 
-    public void setRecompensas(Recompensas recompensas) {
-        this.recompensas = recompensas;
+    public void setRewards(Reward reward) {
+        this.reward = reward;
     }
 
 }

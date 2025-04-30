@@ -11,14 +11,32 @@ public class MissionReward {
     private int idMissionReward;
 
     @ManyToOne
-    @JoinColumn(name="idMissions", nullable=false)
+    @JoinColumn(name="idmissions", nullable=false)
     private Missions missions;
 
-    @ManyToOne
-    @JoinColumn(name="idRewards", nullable=false)
-    private Rewards rewards;
+    @Column(name = "description" , nullable = false , length = 200)
+    private String description;
 
-    public MissionReward() {
+    @ManyToOne
+    @JoinColumn(name="idreward", nullable=false)
+    private Reward reward;
+
+    public MissionReward(){
+    }
+
+    public MissionReward(int idMissionReward, Missions missions, String description, Reward reward) {
+        this.idMissionReward = idMissionReward;
+        this.missions = missions;
+        this.description = description;
+        this.reward = reward;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getIdMissionReward() {
@@ -37,11 +55,11 @@ public class MissionReward {
         this.missions = missions;
     }
 
-    public Rewards getRewards() {
-        return rewards;
+    public Reward getReward() {
+        return reward;
     }
 
-    public void setRewards(Rewards rewards) {
-        this.rewards = rewards;
+    public void setReward(Reward reward) {
+        this.reward = reward;
     }
 }

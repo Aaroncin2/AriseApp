@@ -1,5 +1,6 @@
 package pe.edu.upc.ariseapp.dtos;
 
+
 public class DonationDTO {
     private int idDonation;
     private int idNameDonation;
