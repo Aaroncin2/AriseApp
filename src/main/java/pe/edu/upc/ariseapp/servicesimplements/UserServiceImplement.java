@@ -12,29 +12,29 @@ import java.util.List;
 public class UserServiceImplement implements IUserService {
 
     @Autowired
-    private IUserRepository aR;
+    private IUserRepository uR;
 
     @Override
-    public List<User> list() {return aR.findAll();}
+    public List<User> list() {return uR.findAll();}
 
     @Override
     public void insert(User a) {
-        aR.save(a);
+        uR.save(a);
     }
 
     @Override
     public User listId(int idUser) {
-        return aR.findById(idUser).orElse(new User());
+        return uR.findById(idUser).orElse(new User());
     }
 
     @Override
     public void update(User a) {
-        aR.save(a);
+        uR.save(a);
     }
 
     @Override
     public void delete(int idUser) {
-        aR.deleteById(idUser);
+        uR.deleteById(idUser);
     }
 
 }

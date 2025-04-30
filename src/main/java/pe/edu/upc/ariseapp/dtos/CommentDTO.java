@@ -1,7 +1,5 @@
 package pe.edu.upc.ariseapp.dtos;
 
-import jakarta.persistence.Column;
-
 import java.time.LocalDate;
 
 public class CommentDTO {
@@ -41,5 +39,4 @@ public class CommentDTO {
     public void setDateComment(LocalDate dateComment) {
         this.dateComment = dateComment;
     }
-
 }

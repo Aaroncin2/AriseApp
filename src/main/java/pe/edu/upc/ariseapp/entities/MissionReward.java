@@ -14,11 +14,29 @@ public class MissionReward {
     @JoinColumn(name="idmissions", nullable=false)
     private Missions missions;
 
+    @Column(name = "description" , nullable = false , length = 200)
+    private String description;
+
     @ManyToOne
     @JoinColumn(name="idreward", nullable=false)
     private Reward reward;
 
-    public MissionReward() {
+    public MissionReward(){
+    }
+
+    public MissionReward(int idMissionReward, Missions missions, String description, Reward reward) {
+        this.idMissionReward = idMissionReward;
+        this.missions = missions;
+        this.description = description;
+        this.reward = reward;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getIdMissionReward() {

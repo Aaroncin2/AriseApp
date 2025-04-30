@@ -1,6 +1,5 @@
 package pe.edu.upc.ariseapp.dtos;
 
-import jakarta.persistence.Column;
 
 public class VolunteeringDTO {
     private int idVolunteering;

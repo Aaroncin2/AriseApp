@@ -1,8 +1,5 @@
 package pe.edu.upc.ariseapp.dtos;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import pe.edu.upc.ariseapp.entities.*;
 
 public class ReviewDTO {
@@ -12,7 +9,7 @@ public class ReviewDTO {
     private String textReview;
     private User user;
     private Missions missions;
-    private Recompensas recompensas;
+    private Reward reward;
     private Volunteering volunteering;
     private Campaign campaign;
 
@@ -64,12 +61,12 @@ public class ReviewDTO {
         this.missions = missions;
     }
 
-    public Recompensas getRecompensas() {
-        return recompensas;
+    public Reward getReward() {
+        return reward;
     }
 
-    public void setRecompensas(Recompensas recompensas) {
-        this.recompensas = recompensas;
+    public void setReward(Reward reward) {
+        this.reward = reward;
     }
 
     public Volunteering getVolunteering() {

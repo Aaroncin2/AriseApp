@@ -1,8 +1,5 @@
 package pe.edu.upc.ariseapp.dtos;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import pe.edu.upc.ariseapp.entities.User;
 
 public class MissionsDTO {
@@ -42,6 +39,5 @@ public class MissionsDTO {
     public void setUser(User user) {
         this.user = user;
     }
-
 
 }
