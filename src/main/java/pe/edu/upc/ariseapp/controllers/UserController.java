@@ -36,9 +36,9 @@ public class UserController {
     }
 
     @PutMapping
-    public void modificar(@RequestBody UserDTO uUser) {
+    public void modificar(@RequestBody UserDTO uDTO) {
         ModelMapper m = new ModelMapper();
-        User u = m.map(uUser, User.class);
+        User u = m.map(uDTO, User.class);
         uS.update(u);
     }
     @DeleteMapping("/{idUser}")

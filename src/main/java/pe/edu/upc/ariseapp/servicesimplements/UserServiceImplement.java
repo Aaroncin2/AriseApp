@@ -18,8 +18,8 @@ public class UserServiceImplement implements IUserService {
     public List<User> list() {return uR.findAll();}
 
     @Override
-    public void insert(User a) {
-        uR.save(a);
+    public void insert(User u) {
+        uR.save(u);
     }
 
     @Override
@@ -28,8 +28,8 @@ public class UserServiceImplement implements IUserService {
     }
 
     @Override
-    public void update(User a) {
-        uR.save(a);
+    public void update(User u) {
+        uR.save(u);
     }
 
     @Override
