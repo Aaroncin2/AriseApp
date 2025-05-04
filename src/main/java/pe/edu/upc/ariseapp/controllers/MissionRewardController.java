@@ -2,6 +2,7 @@ package pe.edu.upc.ariseapp.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.ariseapp.dtos.MissionRewardDTO;
 import pe.edu.upc.ariseapp.entities.MissionReward;
@@ -29,6 +30,7 @@ public class MissionRewardController {
         return dto;
     }
     @PostMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public void insertar(@RequestBody MissionRewardDTO mDto){
         ModelMapper modelMapper = new ModelMapper();
         MissionReward mr= modelMapper.map(mDto, MissionReward.class);
@@ -36,12 +38,14 @@ public class MissionRewardController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public void modificar(@RequestBody MissionRewardDTO mDTO) {
         ModelMapper m = new ModelMapper();
         MissionReward mr = m.map(mDTO, MissionReward.class);
         mS.update(mr);
     }
     @DeleteMapping("/{idMissionReward}")
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public void eliminar(@PathVariable("idMissionReward") int idMissionReward) {
         mS.delete(idMissionReward);
     }

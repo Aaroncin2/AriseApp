@@ -2,6 +2,7 @@ package pe.edu.upc.ariseapp.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.ariseapp.dtos.ForumDTO;
 import pe.edu.upc.ariseapp.entities.Forum;
@@ -29,6 +30,7 @@ public class ForumController {
         return dto;
     }
     @PostMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA, ADMIN, VOLUNTARIO')")
     public void insertar(@RequestBody ForumDTO fDTO){
         ModelMapper modelMapper = new ModelMapper();
         Forum f= modelMapper.map(fDTO, Forum.class);
@@ -36,12 +38,14 @@ public class ForumController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN','VOLUNTARIO')")
     public void modificar(@RequestBody ForumDTO fDTO) {
         ModelMapper m = new ModelMapper();
         Forum f = m.map(fDTO, Forum.class);
         fS.update(f);
     }
     @DeleteMapping("/{idForum}")
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN','VOLUNTARIO')")
     public void eliminar(@PathVariable("idForum") int idForum) {
         fS.delete(idForum);
     }

@@ -2,6 +2,7 @@ package pe.edu.upc.ariseapp.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.ariseapp.dtos.RewardDTO;
 import pe.edu.upc.ariseapp.entities.Reward;
@@ -29,6 +30,7 @@ public class RewardController {
         return dto;
     }
     @PostMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public void insertar(@RequestBody RewardDTO rDTO){
         ModelMapper modelMapper = new ModelMapper();
         Reward re= modelMapper.map(rDTO, Reward.class);
@@ -36,12 +38,14 @@ public class RewardController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public void modificar(@RequestBody RewardDTO rDTO) {
         ModelMapper m = new ModelMapper();
         Reward re = m.map(rDTO, Reward.class);
         rS.update(re);
     }
     @DeleteMapping("/{idReward}")
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public void eliminar(@PathVariable("idReward") int idReward) {
         rS.delete(idReward);
     }
