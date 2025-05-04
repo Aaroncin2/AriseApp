@@ -1,10 +1,9 @@
 package pe.edu.upc.ariseapp.dtos;
-
 import pe.edu.upc.ariseapp.entities.User;
 
 public class MissionsDTO {
     private int idMissions;
-    private String name;
+    private String nameMissions;
     private String description;
     private User user;
 
@@ -16,12 +15,12 @@ public class MissionsDTO {
         this.idMissions = idMissions;
     }
 
-    public String getName() {
-        return name;
+    public String getNameMissions() {
+        return nameMissions;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameMissions(String nameMissions) {
+        this.nameMissions = nameMissions;
     }
 
     public String getDescription() {
@@ -39,5 +38,4 @@ public class MissionsDTO {
     public void setUser(User user) {
         this.user = user;
     }
-
 }

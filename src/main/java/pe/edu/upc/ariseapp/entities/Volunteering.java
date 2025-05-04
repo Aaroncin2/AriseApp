@@ -22,7 +22,21 @@ public class Volunteering {
     @Column(name = "areaVolunteering",nullable = false, length = 45)
     private String areaVolunteering;
 
-    public Volunteering() {}
+    @ManyToOne
+    @JoinColumn(name="nameCampaign", nullable=false)
+    private Campaign campaign;
+
+    @ManyToOne
+    @JoinColumn(name="nameDonation", nullable=false)
+    private Donation donation;
+
+    @ManyToOne
+    @JoinColumn(name="idRol", nullable=false)
+    private Rol rol;
+
+    public Volunteering() {
+
+    }
 
     public int getIdVolunteering() {
         return idVolunteering;

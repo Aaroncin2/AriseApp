@@ -3,7 +3,7 @@ package pe.edu.upc.ariseapp.dtos;
 
 public class DonationDTO {
     private int idDonation;
-    private int idNameDonation;
+    private String nameDonation;
     private String donation;
 
     public int getIdDonation() {
@@ -14,12 +14,12 @@ public class DonationDTO {
         this.idDonation = idDonation;
     }
 
-    public int getIdNameDonation() {
-        return idNameDonation;
+    public String getNameDonation() {
+        return nameDonation;
     }
 
-    public void setIdNameDonation(int idNameDonation) {
-        this.idNameDonation = idNameDonation;
+    public void setNameDonation(String nameDonation) {
+        this.nameDonation = nameDonation;
     }
 
     public String getDonation() {

@@ -1,5 +1,7 @@
 package pe.edu.upc.ariseapp.dtos;
-
+import pe.edu.upc.ariseapp.entities.Campaign;
+import pe.edu.upc.ariseapp.entities.Donation;
+import pe.edu.upc.ariseapp.entities.Rol;
 
 public class VolunteeringDTO {
     private int idVolunteering;
@@ -7,6 +9,9 @@ public class VolunteeringDTO {
     private String activityVolunteering;
     private Boolean attendanceVolunteering;
     private String areaVolunteering;
+    private Campaign campaign;
+    private Donation donation;
+    private Rol rol;
 
     public int getIdVolunteering() {
         return idVolunteering;
@@ -46,6 +51,30 @@ public class VolunteeringDTO {
 
     public void setAreaVolunteering(String areaVolunteering) {
         this.areaVolunteering = areaVolunteering;
+    }
+
+    public Campaign getCampaign() {
+        return campaign;
+    }
+
+    public void setCampaign(Campaign campaign) {
+        this.campaign = campaign;
+    }
+
+    public Donation getDonation() {
+        return donation;
+    }
+
+    public void setDonation(Donation donation) {
+        this.donation = donation;
+    }
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
 
 }

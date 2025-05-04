@@ -9,7 +9,7 @@ import pe.edu.upc.ariseapp.servicesinterfaces.IReviewService;
 import java.util.List;
 
 @Service
-public class ReviewServiceImplements implements IReviewService {
+public class ReviewServiceImplement implements IReviewService {
     @Autowired
     private IReviewRepository rR;
 

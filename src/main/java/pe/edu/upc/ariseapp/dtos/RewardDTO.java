@@ -2,7 +2,7 @@ package pe.edu.upc.ariseapp.dtos;
 
 public class RewardDTO {
     private int idReward;
-    private String rewards;
+    private String reward;
 
     public int getIdReward() {
         return idReward;
@@ -12,12 +12,11 @@ public class RewardDTO {
         this.idReward = idReward;
     }
 
-    public String getRewards() {
-        return rewards;
+    public String getReward() {
+        return reward;
     }
 
-    public void setRewards(String rewards) {
-        this.rewards = rewards;
+    public void setReward(String reward) {
+        this.reward = reward;
     }
-
 }

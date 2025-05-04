@@ -12,14 +12,14 @@ public class Review {
     @Column(name = "categoryReview", nullable = false)
     private String categoryReview;
 
-    @Column(name = "calificacionReview", nullable = false)
-    private int calificacionReview;
+    @Column(name = "qualificationReview", nullable = false)
+    private int qualificationReview;
 
     @Column(name = "textReview", nullable = false)
     private String textReview;
 
     @ManyToOne
-    @JoinColumn(name = "user", nullable = false)
+    @JoinColumn(name = "nameUser", nullable = false)
     private User user;
 
     @ManyToOne
@@ -41,10 +41,10 @@ public class Review {
     public Review() {
     }
 
-    public Review(int idReview, String categoryReview, int calificacionReview, String textReview, User user, Missions missions, Reward reward, Volunteering volunteering, Campaign campaign) {
+    public Review(int idReview, String categoryReview, int qualificationReview, String textReview, User user, Missions missions, Reward reward, Volunteering volunteering, Campaign campaign) {
         this.idReview = idReview;
         this.categoryReview = categoryReview;
-        this.calificacionReview = calificacionReview;
+        this.qualificationReview = qualificationReview;
         this.textReview = textReview;
         this.user = user;
         this.missions = missions;
@@ -69,12 +69,12 @@ public class Review {
         this.categoryReview = categoryReview;
     }
 
-    public int getCalificacionReview() {
-        return calificacionReview;
+    public int getQualificationReview() {
+        return qualificationReview;
     }
 
-    public void setCalificacionReview(int calificacionReview) {
-        this.calificacionReview = calificacionReview;
+    public void setQualificationReview(int qualificationReview) {
+        this.qualificationReview = qualificationReview;
     }
 
     public String getTextReview() {
@@ -101,11 +101,11 @@ public class Review {
         this.missions = missions;
     }
 
-    public Reward getreward() {
+    public Reward getReward() {
         return reward;
     }
 
-    public void setreward(Reward reward) {
+    public void setReward(Reward reward) {
         this.reward = reward;
     }
 
@@ -124,4 +124,5 @@ public class Review {
     public void setCampaign(Campaign campaign) {
         this.campaign = campaign;
     }
+
 }
