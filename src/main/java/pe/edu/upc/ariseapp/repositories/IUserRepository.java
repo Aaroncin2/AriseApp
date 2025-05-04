@@ -6,4 +6,5 @@ import pe.edu.upc.ariseapp.entities.User;
 
 @Repository
 public interface IUserRepository extends JpaRepository<User, Integer> {
+    public User findOneByUsername(String username);
 }

@@ -18,8 +18,6 @@ public class Foro {
     @Column(name = "dateForo", nullable = false)
     private String dateForo;
 
-
-
     public Foro() {}
 
     public Foro(int idForo, String nameForo, String contenidoForo, String dateForo) {

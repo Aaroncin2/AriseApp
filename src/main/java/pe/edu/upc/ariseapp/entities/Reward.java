@@ -2,7 +2,6 @@ package pe.edu.upc.ariseapp.entities;
 
 
 import jakarta.persistence.*;
-
 @Entity
 @Table(name ="reward")
 public class Reward {
@@ -13,8 +12,7 @@ public class Reward {
     @Column(name = "reward", nullable = false, length = 50)
     private String reward;
 
-    public Reward() {
-    }
+    public Reward() {}
 
     public Reward(int idReward, String reward) {
         this.idReward = idReward;
@@ -37,4 +35,3 @@ public class Reward {
         this.reward = reward;
     }
 }
-

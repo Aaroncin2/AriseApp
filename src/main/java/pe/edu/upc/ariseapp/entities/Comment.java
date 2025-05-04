@@ -21,10 +21,7 @@ public class Comment {
     @Column(name = "dateComment",nullable = false)
     private LocalDate dateComment;
 
-
-    public Comment() {
-    }
-
+    public Comment() {}
 
     public int getIdComment() {
         return idComment;

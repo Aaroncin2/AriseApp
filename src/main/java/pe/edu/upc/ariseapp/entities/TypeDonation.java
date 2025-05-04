@@ -14,9 +14,7 @@ public class TypeDonation {
     @Column(name = "typeDonation" , nullable = false)
     private String typeDonation;
 
-    public TypeDonation() {
-
-    }
+    public TypeDonation() {}
 
     public TypeDonation(int idTypeDonation, String typeDonation) {
         this.idTypeDonation = idTypeDonation;

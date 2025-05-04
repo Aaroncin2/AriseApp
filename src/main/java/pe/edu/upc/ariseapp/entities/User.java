@@ -25,12 +25,12 @@ public class User implements Serializable {
     @Column(length = 20)
     private String passwordUser;
 
-@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-@JoinColumn(name="idUser")
-private List<Rol> rols;
+    private Boolean enabled;
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name="idUser")
+    private List<Rol> rols;
 
-    public User() {
-    }
+    public User() {}
 
     public User(int idUser, String nameUser, String emailUser, String numberUser, String passwordUser) {
         this.idUser = idUser;
@@ -79,4 +79,12 @@ private List<Rol> rols;
     public void setPasswordUser(String passwordUser) {
         this.passwordUser = passwordUser;
     }
+
+    public Boolean getEnabled() {return enabled;}
+
+    public void setEnabled(Boolean enabled) {this.enabled = enabled;}
+
+    public List<Rol> getRols() {return rols;}
+
+    public void setRols(List<Rol> rols) {this.rols = rols;}
 }

@@ -21,8 +21,7 @@ public class MissionReward {
     @JoinColumn(name="idreward", nullable=false)
     private Reward reward;
 
-    public MissionReward(){
-    }
+    public MissionReward(){}
 
     public MissionReward(int idMissionReward, Missions missions, String description, Reward reward) {
         this.idMissionReward = idMissionReward;

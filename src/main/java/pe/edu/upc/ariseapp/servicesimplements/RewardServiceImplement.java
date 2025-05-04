@@ -6,7 +6,6 @@ import pe.edu.upc.ariseapp.entities.Reward;
 import pe.edu.upc.ariseapp.repositories.IRewardRepository;
 import pe.edu.upc.ariseapp.servicesinterfaces.IRewardService;
 
-
 import java.util.List;
 
 @Service

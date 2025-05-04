@@ -25,8 +25,7 @@ public class Campaign {
     @JoinColumn(name="idRol", nullable=false)
     private Rol rol;
 
-    public Campaign() {
-    }
+    public Campaign() {}
 
     public Campaign(int idCampaign, String nameCampaign, String descriptionCampaign, LocalDate dateCampaign, Rol rol) {
         this.idCampaign = idCampaign;
@@ -76,5 +75,3 @@ public class Campaign {
         this.rol = rol;
     }
 }
-
-

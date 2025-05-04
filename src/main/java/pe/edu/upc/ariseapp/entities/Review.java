@@ -1,7 +1,6 @@
 package pe.edu.upc.ariseapp.entities;
 
 import jakarta.persistence.*;
-
 @Entity
 @Table(name="review")
 public class Review {

@@ -22,9 +22,7 @@ public class Volunteering {
     @Column(name = "areaVolunteering",nullable = false, length = 45)
     private String areaVolunteering;
 
-    public Volunteering() {
-
-    }
+    public Volunteering() {}
 
     public int getIdVolunteering() {
         return idVolunteering;

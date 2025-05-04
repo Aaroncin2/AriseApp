@@ -18,8 +18,7 @@ public class Missions {
     @JoinColumn(name="idUser", nullable=false)
     private User user;
 
-    public Missions() {
-    }
+    public Missions() {}
 
     public Missions(int id, String name, String description, User user) {
         this.idMissions = idMissions;
@@ -52,9 +51,7 @@ public class Missions {
         this.description = description;
     }
 
-    public User getUser() {
-        return user;
-    }
+    public User getUser() {return user;}
 
     public void setUser(User user) {
         this.user = user;

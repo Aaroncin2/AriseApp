@@ -61,13 +61,9 @@ public class ReviewDTO {
         this.missions = missions;
     }
 
-    public Reward getReward() {
-        return reward;
-    }
+    public Reward getReward() {return reward;}
 
-    public void setReward(Reward reward) {
-        this.reward = reward;
-    }
+    public void setReward(Reward reward) {this.reward = reward;}
 
     public Volunteering getVolunteering() {
         return volunteering;
