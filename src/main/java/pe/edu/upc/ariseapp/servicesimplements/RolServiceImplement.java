@@ -16,7 +16,7 @@ public class RolServiceImplement implements IRolService {
 private IRolRepository rR;
 
     @Override
-    public List<Rol> list() {return (List<Rol>) rR.findAll();}
+    public List<Rol> list() {return rR.findAll();}
 
     @Override
     public void insert(Rol ro) {rR.save(ro);}

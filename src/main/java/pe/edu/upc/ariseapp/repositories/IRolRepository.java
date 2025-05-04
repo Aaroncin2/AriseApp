@@ -1,9 +1,10 @@
 package pe.edu.upc.ariseapp.repositories;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import pe.edu.upc.ariseapp.entities.Rol;
 
 @Repository
-public interface IRolRepository extends CrudRepository<Rol, Integer> {
+public interface IRolRepository extends JpaRepository<Rol, Integer> {
 }
