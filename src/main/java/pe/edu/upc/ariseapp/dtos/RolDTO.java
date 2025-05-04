@@ -4,11 +4,6 @@ import pe.edu.upc.ariseapp.entities.User;
 public class RolDTO {
     private Long idRol;
     private String rol;
-    private User user;
-
-    public User getUser() {return user;}
-
-    public void setUser(User user) {this.user = user;}
 
     public Long getIdRol() {return idRol;}
 
