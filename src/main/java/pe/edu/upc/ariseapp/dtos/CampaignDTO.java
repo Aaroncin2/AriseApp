@@ -48,8 +48,4 @@ public class CampaignDTO {
     public void setRol(Rol rol) {
         this.rol = rol;
     }
-
-
 }
-
-

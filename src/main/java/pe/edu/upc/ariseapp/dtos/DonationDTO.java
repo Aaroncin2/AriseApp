@@ -29,7 +29,4 @@ public class DonationDTO {
     public void setDonation(String donation) {
         this.donation = donation;
     }
-
-
-
 }

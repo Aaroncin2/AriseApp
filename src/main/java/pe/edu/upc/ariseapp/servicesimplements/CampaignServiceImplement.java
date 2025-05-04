@@ -3,13 +3,10 @@ package pe.edu.upc.ariseapp.servicesimplements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.ariseapp.entities.Campaign;
-import pe.edu.upc.ariseapp.entities.User;
 import pe.edu.upc.ariseapp.repositories.ICampaignRepository;
 import pe.edu.upc.ariseapp.servicesinterfaces.ICampaignService;
 
-
 import java.util.List;
-
 
 @Service
 public class CampaignServiceImplement implements ICampaignService {
@@ -39,4 +36,3 @@ public class CampaignServiceImplement implements ICampaignService {
     }
 
 }
-
