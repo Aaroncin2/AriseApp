@@ -2,6 +2,7 @@ package pe.edu.upc.ariseapp.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.ariseapp.dtos.CommentDTO;
 import pe.edu.upc.ariseapp.entities.Comment;
@@ -29,6 +30,7 @@ public class CommentController {
         return dto;
     }
     @PostMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN','VOLUNTARIO')")
     public void insertar(@RequestBody CommentDTO cDto){
         ModelMapper modelMapper = new ModelMapper();
         Comment c= modelMapper.map(cDto, Comment.class);
@@ -36,12 +38,14 @@ public class CommentController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN','VOLUNTARIO')")
     public void modificar(@RequestBody CommentDTO cDTO) {
         ModelMapper m = new ModelMapper();
         Comment c = m.map(cDTO, Comment.class);
         cS.update(c);
     }
     @DeleteMapping("/{idComment}")
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN','VOLUNTARIO')")
     public void eliminar(@PathVariable("idComment") int idComment) {
         cS.delete(idComment);
     }

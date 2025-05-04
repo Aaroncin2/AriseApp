@@ -2,6 +2,7 @@ package pe.edu.upc.ariseapp.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.ariseapp.dtos.UserDTO;
 import pe.edu.upc.ariseapp.entities.User;
@@ -16,6 +17,7 @@ public class UserController {
     @Autowired
     private IUserService uS;
     @GetMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public List<UserDTO> listar(){
         return uS.list().stream().map(x->{
             ModelMapper modelMapper = new ModelMapper();
@@ -23,6 +25,7 @@ public class UserController {
         }).collect(Collectors.toList());
     }
     @GetMapping("/{idUser}")
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public UserDTO listarId(@PathVariable("idUser") int idUser) {
         ModelMapper m = new ModelMapper();
         UserDTO dto = m.map(uS.listId(idUser), UserDTO.class);
@@ -36,12 +39,14 @@ public class UserController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN', 'VOLUNTARIO')")
     public void modificar(@RequestBody UserDTO uDTO) {
         ModelMapper m = new ModelMapper();
         User u = m.map(uDTO, User.class);
         uS.update(u);
     }
     @DeleteMapping("/{idUser}")
+    @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN', 'VOLUNTARIO')")
     public void eliminar(@PathVariable("idUser") int idUser) {
         uS.delete(idUser);
     }
