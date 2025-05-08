@@ -11,5 +11,6 @@ public interface ITypeDonationService {
     public TypeDonation listId(int idTypeDonation);
     public void update(TypeDonation td);
     public void delete(int idTypeDonation);
+    public List<String[]> cantidadDonaciones();
 
 }

@@ -33,4 +33,7 @@ public class TypeDonationServiceImplement implements ITypeDonationService {
     public void delete(int idTypeDonation) {
         tR.deleteById(idTypeDonation);
     }
+
+    @Override
+    public List<String[]> cantidadDonaciones(){ return tR.cantidadDonaciones();};
 }
