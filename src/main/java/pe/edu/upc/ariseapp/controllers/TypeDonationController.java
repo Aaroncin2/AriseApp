@@ -4,10 +4,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.ariseapp.dtos.HU54DTO;
 import pe.edu.upc.ariseapp.dtos.TypeDonationDTO;
 import pe.edu.upc.ariseapp.entities.TypeDonation;
 import pe.edu.upc.ariseapp.servicesinterfaces.ITypeDonationService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,5 +52,18 @@ public class TypeDonationController {
     @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public void eliminar(@PathVariable("idTypeDonation") int idTypeDonation) {
         tS.delete(idTypeDonation);
+    }
+
+    @GetMapping("/HU54")
+    public List<HU54DTO> HU54(){
+        List<HU54DTO> dtos = new ArrayList<>();
+        List<String[]> filaLista = tS.cantidadDonaciones();
+        for (String[] columna: filaLista){
+            HU54DTO dto = new HU54DTO();
+            dto.setTypeDonation(columna[0]);
+            dto.setCantidad(Integer.parseInt(columna[1]));
+            dtos.add(dto);
+        }
+        return dtos;
     }
 }
