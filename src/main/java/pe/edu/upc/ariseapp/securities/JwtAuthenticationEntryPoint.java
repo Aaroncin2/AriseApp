@@ -1,4 +1,4 @@
-package pe.edu.upc.ariseapp.Securities;
+package pe.edu.upc.ariseapp.securities;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.io.Serializable;
 
+//Clase 7
 @Component
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Serializable {
 

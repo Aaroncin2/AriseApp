@@ -1,21 +1,22 @@
 package pe.edu.upc.ariseapp.dtos;
+import jakarta.persistence.*;
 import pe.edu.upc.ariseapp.entities.Rol;
 
 import java.util.List;
 
 public class UserDTO {
-    private int idUser;
+    private Long idUser;
     private String nameUser;
     private String emailUser;
     private String numberUser;
     private String passwordUser;
     private List<Rol> rols;
 
-    public int getIdUser() {
+    public Long getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(int idUser) {
+    public void setIdUser(Long idUser) {
         this.idUser = idUser;
     }
 

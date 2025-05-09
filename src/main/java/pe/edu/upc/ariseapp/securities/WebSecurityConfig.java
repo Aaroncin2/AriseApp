@@ -1,4 +1,4 @@
-package pe.edu.upc.ariseapp.Securities;
+package pe.edu.upc.ariseapp.securities;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,6 +21,8 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
+//@Profile(value = {"development", "production"})
+//Clase S7
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -60,12 +62,7 @@ public class WebSecurityConfig {
         httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req -> req
-                        .requestMatchers(antMatcher("/login"),
-                                antMatcher("/swagger-ui/**"),
-                                antMatcher("/v3/api-docs/**"),
-                                antMatcher("/swagger-resources/**"),
-                                antMatcher("/webjars/**")
-                        ).permitAll()
+                        .requestMatchers(antMatcher("/login")).permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults())

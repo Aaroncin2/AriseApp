@@ -1,18 +1,16 @@
 package pe.edu.upc.ariseapp.entities;
-
-
 import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.List;
+
 
 @Entity
 @Table(name = "users")
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idUser;
-
+    private Long idUser;
     @Column(length = 45, unique = true)
     private String nameUser;
 
@@ -24,27 +22,17 @@ public class User implements Serializable {
 
     @Column(length = 20)
     private String passwordUser;
-
     private Boolean enabled;
+
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name="idUser")
+    @JoinColumn(name="user_id")
     private List<Rol> rols;
 
-    public User() {}
-
-    public User(int idUser, String nameUser, String emailUser, String numberUser, String passwordUser) {
-        this.idUser = idUser;
-        this.nameUser = nameUser;
-        this.emailUser = emailUser;
-        this.numberUser = numberUser;
-        this.passwordUser = passwordUser;
-    }
-
-    public int getIdUser() {
+    public Long getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(int idUser) {
+    public void setIdUser(Long idUser) {
         this.idUser = idUser;
     }
 
@@ -60,7 +48,7 @@ public class User implements Serializable {
         return emailUser;
     }
 
-    public void setEmailUser(String EmailUser) {
+    public void setEmailUser(String emailUser) {
         this.emailUser = emailUser;
     }
 
@@ -80,11 +68,19 @@ public class User implements Serializable {
         this.passwordUser = passwordUser;
     }
 
-    public Boolean getEnabled() {return enabled;}
+    public Boolean getEnabled() {
+        return enabled;
+    }
 
-    public void setEnabled(Boolean enabled) {this.enabled = enabled;}
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
 
-    public List<Rol> getRols() {return rols;}
+    public List<Rol> getRols() {
+        return rols;
+    }
 
-    public void setRols(List<Rol> rols) {this.rols = rols;}
+    public void setRols(List<Rol> rols) {
+        this.rols = rols;
+    }
 }

@@ -23,7 +23,7 @@ public class UserServiceImplement implements IUserService {
     }
 
     @Override
-    public User listId(int idUser) {
+    public User listId(Long idUser) {
         return uR.findById(idUser).orElse(new User());
     }
 
@@ -33,7 +33,7 @@ public class UserServiceImplement implements IUserService {
     }
 
     @Override
-    public void delete(int idUser) {
+    public void delete(Long idUser) {
         uR.deleteById(idUser);
     }
 

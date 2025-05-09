@@ -2,7 +2,7 @@ package pe.edu.upc.ariseapp.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="typedonation")
+@Table(name="typedonations")
 public class TypeDonation {
 
     @Id
