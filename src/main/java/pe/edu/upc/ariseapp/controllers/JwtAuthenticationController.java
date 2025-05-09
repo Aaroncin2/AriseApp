@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import pe.edu.upc.ariseapp.Securities.JwtRequest;
-import pe.edu.upc.ariseapp.Securities.JwtResponse;
-import pe.edu.upc.ariseapp.Securities.JwtTokenUtil;
+import pe.edu.upc.ariseapp.securities.JwtRequest;
+import pe.edu.upc.ariseapp.securities.JwtResponse;
 import pe.edu.upc.ariseapp.servicesimplements.JwtUserDetailsService;
 
 @RestController
@@ -22,10 +21,9 @@ public class JwtAuthenticationController {
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
-    private JwtTokenUtil jwtTokenUtil;
+    private pe.edu.upc.ariseapp.securities.JwtTokenUtil jwtTokenUtil;
     @Autowired
     private JwtUserDetailsService userDetailsService;
-
 
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest req) throws Exception {
