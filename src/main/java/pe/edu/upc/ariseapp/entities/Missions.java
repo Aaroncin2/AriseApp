@@ -2,7 +2,7 @@ package pe.edu.upc.ariseapp.entities;
 
 import jakarta.persistence.*;
 @Entity
-@Table(name= "Missions")
+@Table(name= "missions")
 public class Missions {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

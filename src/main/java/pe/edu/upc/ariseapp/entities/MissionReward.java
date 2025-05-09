@@ -3,7 +3,7 @@ package pe.edu.upc.ariseapp.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name ="MissionReward")
+@Table(name ="missionRewards")
 public class MissionReward {
 
     @Id

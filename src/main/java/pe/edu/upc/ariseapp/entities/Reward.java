@@ -3,7 +3,7 @@ package pe.edu.upc.ariseapp.entities;
 
 import jakarta.persistence.*;
 @Entity
-@Table(name ="reward")
+@Table(name ="rewards")
 public class Reward {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

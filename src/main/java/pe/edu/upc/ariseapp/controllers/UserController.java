@@ -14,8 +14,10 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+
     @Autowired
     private IUserService uS;
+
     @GetMapping
     @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
     public List<UserDTO> listar(){
@@ -24,17 +26,19 @@ public class UserController {
             return modelMapper.map(x, UserDTO.class);
         }).collect(Collectors.toList());
     }
+
     @GetMapping("/{idUser}")
     @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
-    public UserDTO listarId(@PathVariable("idUser") int idUser) {
+    public UserDTO listarId(@PathVariable("idUser") Long idUser) {
         ModelMapper m = new ModelMapper();
         UserDTO dto = m.map(uS.listId(idUser), UserDTO.class);
         return dto;
     }
+
     @PostMapping
-    public void insertar(@RequestBody UserDTO uDto){
+    public void insertar(@RequestBody UserDTO uDTO){
         ModelMapper modelMapper = new ModelMapper();
-        User u= modelMapper.map(uDto, User.class);
+        User u= modelMapper.map(uDTO, User.class);
         uS.insert(u);
     }
 
@@ -45,9 +49,10 @@ public class UserController {
         User u = m.map(uDTO, User.class);
         uS.update(u);
     }
+
     @DeleteMapping("/{idUser}")
     @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN', 'VOLUNTARIO')")
-    public void eliminar(@PathVariable("idUser") int idUser) {
+    public void eliminar(@PathVariable("idUser") Long idUser) {
         uS.delete(idUser);
     }
 }

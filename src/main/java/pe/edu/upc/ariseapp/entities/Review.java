@@ -2,7 +2,7 @@ package pe.edu.upc.ariseapp.entities;
 
 import jakarta.persistence.*;
 @Entity
-@Table(name="review")
+@Table(name="reviews")
 public class Review {
 
     @Id

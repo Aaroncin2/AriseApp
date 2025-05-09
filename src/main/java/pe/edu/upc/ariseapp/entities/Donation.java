@@ -4,7 +4,7 @@ package pe.edu.upc.ariseapp.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="donation")
+@Table(name="donations")
 public class Donation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

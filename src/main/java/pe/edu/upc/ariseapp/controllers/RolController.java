@@ -32,7 +32,7 @@ public class RolController {
 
     @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public RolDTO listarId(@PathVariable("idRol") int idRol) {
+    public RolDTO listarId(@PathVariable("id") Long idRol) {
         ModelMapper m = new ModelMapper();
         RolDTO dto = m.map(rS.listId(idRol), RolDTO.class);
         return dto;
@@ -56,7 +56,7 @@ public class RolController {
 
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public void eliminar(@PathVariable("id") int id) {
+    public void eliminar(@PathVariable("id") Long id) {
         rS.delete(id);
     }
 }
