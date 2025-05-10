@@ -12,6 +12,7 @@ public class UserDTO {
     private String passwordUser;
     private List<Rol> rols;
 
+
     public Long getIdUser() {
         return idUser;
     }
