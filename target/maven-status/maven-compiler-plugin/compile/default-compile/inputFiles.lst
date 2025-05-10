@@ -16,6 +16,7 @@ C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ari
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\dtos\CommentDTO.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\dtos\DonationDTO.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\dtos\ForumDTO.java
+C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\dtos\HU54DTO.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\dtos\MissionRewardDTO.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\dtos\MissionsDTO.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\dtos\ReviewDTO.java
@@ -48,12 +49,12 @@ C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ari
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\repositories\ITypeDonationRepository.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\repositories\IUserRepository.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\repositories\IVolunteeringRepository.java
-C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\Securities\JwtAuthenticationEntryPoint.java
-C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\Securities\JwtRequest.java
-C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\Securities\JwtRequestFilter.java
-C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\Securities\JwtResponse.java
-C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\Securities\JwtTokenUtil.java
-C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\Securities\WebSecurityConfig.java
+C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\securities\JwtAuthenticationEntryPoint.java
+C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\securities\JwtRequest.java
+C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\securities\JwtRequestFilter.java
+C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\securities\JwtResponse.java
+C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\securities\JwtTokenUtil.java
+C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\securities\WebSecurityConfig.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\servicesimplements\CampaignServiceImplement.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\servicesimplements\CommentServiceImplement.java
 C:\Users\piero\Downloads\Proyecto_Apps_Web\AriseApp\src\main\java\pe\edu\upc\ariseapp\servicesimplements\DonationServiceImplement.java
