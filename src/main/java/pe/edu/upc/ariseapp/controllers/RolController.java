@@ -32,9 +32,9 @@ public class RolController {
         }).collect(Collectors.toList());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idRol}")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public RolDTO listarId(@PathVariable("id") int idRol) {
+    public RolDTO listarId(@PathVariable("idRol") int idRol) {
         ModelMapper m = new ModelMapper();
         RolDTO dto = m.map(rS.listId(idRol), RolDTO.class);
         return dto;
