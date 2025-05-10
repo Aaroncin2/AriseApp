@@ -22,11 +22,11 @@ private IRolRepository rR;
     public void insert(Rol ro) {rR.save(ro);}
 
     @Override
-    public Rol listId(Long idRol) {return rR.findById(idRol).orElse(new Rol());}
+    public Rol listId(int idRol) {return rR.findById(idRol).orElse(new Rol());}
 
     @Override
     public void update(Rol ro) {rR.save(ro);}
 
     @Override
-    public void delete(Long idRol) {rR.deleteById(idRol);}
+    public void delete(int idRol) {rR.deleteById(idRol);}
 }

@@ -1,5 +1,6 @@
 package pe.edu.upc.ariseapp.controllers;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,8 +16,9 @@ import pe.edu.upc.ariseapp.servicesinterfaces.IRolService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@SecurityRequirement(name = "bearerAuth")
 @RestController
-@RequestMapping("/rol")
+@RequestMapping("/rols")
 public class RolController {
     @Autowired
     private IRolService rS;
@@ -32,7 +34,7 @@ public class RolController {
 
     @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public RolDTO listarId(@PathVariable("id") Long idRol) {
+    public RolDTO listarId(@PathVariable("id") int idRol) {
         ModelMapper m = new ModelMapper();
         RolDTO dto = m.map(rS.listId(idRol), RolDTO.class);
         return dto;
@@ -54,9 +56,9 @@ public class RolController {
         rS.update(r);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idRol}")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public void eliminar(@PathVariable("id") Long id) {
-        rS.delete(id);
+    public void eliminar(@PathVariable("idRol") int idRol) {
+        rS.delete(idRol);
     }
 }

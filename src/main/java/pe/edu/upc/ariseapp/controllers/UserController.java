@@ -1,5 +1,6 @@
 package pe.edu.upc.ariseapp.controllers;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -11,6 +12,7 @@ import pe.edu.upc.ariseapp.servicesinterfaces.IUserService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@SecurityRequirement(name = "bearerAuth")
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -29,7 +31,7 @@ public class UserController {
 
     @GetMapping("/{idUser}")
     @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN')")
-    public UserDTO listarId(@PathVariable("idUser") Long idUser) {
+    public UserDTO listarId(@PathVariable("idUser") int idUser) {
         ModelMapper m = new ModelMapper();
         UserDTO dto = m.map(uS.listId(idUser), UserDTO.class);
         return dto;
@@ -52,7 +54,7 @@ public class UserController {
 
     @DeleteMapping("/{idUser}")
     @PreAuthorize("hasAnyAuthority('ECOLOGISTA', 'ADMIN', 'VOLUNTARIO')")
-    public void eliminar(@PathVariable("idUser") Long idUser) {
+    public void eliminar(@PathVariable("idUser") int idUser) {
         uS.delete(idUser);
     }
 }
