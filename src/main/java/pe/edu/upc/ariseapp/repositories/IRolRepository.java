@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import pe.edu.upc.ariseapp.entities.Rol;
 
 @Repository
-public interface IRolRepository extends JpaRepository<Rol, Long> {
+public interface IRolRepository extends JpaRepository<Rol, Integer> {
 }
