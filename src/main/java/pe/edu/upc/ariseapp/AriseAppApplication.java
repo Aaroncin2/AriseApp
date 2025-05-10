@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "Library APIS", version = "1.0", description = "Library Management Apis. "))
-public class AriseAppApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(AriseAppApplication.class, args);
-    }
+public class AriseAppApplication {
+        public static void main(String[] args) {
+            SpringApplication.run(pe.edu.upc.ariseapp.AriseAppApplication.class, args);
+        }
 }
